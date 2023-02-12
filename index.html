@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Expression of Interest Form</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .red {
+      color: #ff0000
+    }
+
+    tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 75px;
+      background-color: #696969;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 4px 0;
+
+      position: absolute;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Expression of Interest</h1>
+  <p>Please fill in all the spaces provided. <span class="red">(* Required)</span></p>
+  <div class="container">
+    <form>
+      <input type="submit" onclick="return false;" style="display:none;"></input>
+      <div class="row">
+        <div class="col-25">
+          <label for="title">Title <span class="red tooltip">*<span class="tooltiptext">Required</span></span></label>
+        </div>
+        <div class="col-75">
+          <select id="title" name="title" required>
+            <option value="">None</option>
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+            <option value="Ms">Ms</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name <span class="red tooltip">*<span
+                class="tooltiptext">Required</span></span></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name <span class="red tooltip">*<span
+                class="tooltiptext">Required</span></span></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="locations">Location <span class="red tooltip">*<span
+                class="tooltiptext">Required</span></span></label>
+        </div>
+        <div class="col-75">
+          <select id="locations" name="locations" required>
+            <option value="">None</option>
+            <option value="Belfast">Belfast</option>
+            <option value="Cambirdge">Cambirdge</option>
+            <option value="Cardiff">Cardiff</option>
+            <option value="London">London</option>
+            <option value="Manchester">Manchester</option>
+            <option value="Newcastle">Newcastle</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="tnumber">Telephone Number <span class="red tooltip">*<span
+                class="tooltiptext">Required</span></span></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="tnumber" name="telephonenumber" placeholder="Your telephone number..." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email <span class="red tooltip">*<span class="tooltiptext">Required</span></span></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="email" name="user_email" placeholder="Your email..." required>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
